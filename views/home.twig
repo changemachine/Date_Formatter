@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
   <title>Your Address Book</title>
 </head>
 <body>
-  <div class='container'>
+  <div class="container">
     <h1>Your Address Book</h1>
+    <div class="row">
     {% for contact in contacts %}
-    <div class='row'>
-      <div class='col-md-6'>
-        <p>Name: {{ contact.getName }}</p>
-        <p>Phone: {{ contact.getPhone }} </p>
-        <p>Address: {{ contact.getAddress }} </p>
+      <div class="col-md-3 box">
+        <p><strong>Name:</strong> {{ contact.getName }}</p>
+        <p><strong>Phone:</strong> {{ contact.getPhone }}</p>
+        <p><strong>Address:</strong> {{ contact.getAddress }}</p>
       </div>
-    </div>
     {% endfor %}
+    </div>
   </div>
-  <form action="/create_contact" method="post">
+  <form class="center" action="/create_contact" method="post">
     <div class="row">
       <div class="form-group col-lg-4">
         <label for="name">Enter name:</label>
@@ -38,8 +39,10 @@
     </div>
     <button type="submit" class="btn-primary">Add New</button>
   </form>
-  <form action="/delete_contacts">
-    <button type="submit" class="btn-danger">Delete All Contacts</button>
-  </form>
+  <p>
+    <form class="center" action="/delete_contacts">
+      <button type="submit" class="btn-danger">Delete All Contacts</button>
+    </form>
+  </p>
 </body>
 </html>
