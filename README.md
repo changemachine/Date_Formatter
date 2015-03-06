@@ -5,10 +5,10 @@
 Address Book is a simple contact store that uses session variables to store the contacts added by the user. The user can add, view, and delete contacts.  
 
 #### Setup instructions
-1 Clone this git repository
-2 Set your localhost root folder to ~/AddressBook/web/
-3 Ensure PHP server is running.
-4 Start the web app by pointing your browser to the root (http://localhost:8000/)  
+1. Clone this git repository
+2. Set your localhost root folder to ~/AddressBook/web/
+3. Ensure PHP server is running.
+4. Start the web app by pointing your browser to the root (http://localhost:8000/)  
 
 #### Copyright 2015 Daniel Toader  
 
