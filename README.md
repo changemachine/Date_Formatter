@@ -10,7 +10,7 @@ Address Book is a simple contact store that uses session variables to store the 
 3. Ensure PHP server is running.
 4. Start the web app by pointing your browser to the root (http://localhost:8000/)  
 
-#### Copyright 2015 Daniel Toader  
+#### Copyright © 2015, Daniel Toader  
 
 #### License: <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT</a>  
 
