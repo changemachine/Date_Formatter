@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
-    <title>Your Address Book</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+  <title>Your Address Book</title>
 </head>
-
 <body>
-    <div class='container'>
-        <h1>Your Address Book</h1>
-        {% for contact in contacts %}
-        <div class='row'>
-               <div class='col-md-6'>
-                    <p>Name: {{ contact.getName }}</p>
-                    <p>Phone: {{ contact.getPhone }} </p>
-                    <p>Address: {{ contact.getAddress }} </p>
-                </div>
-        </div>
-        {% endfor %}
+  <div class='container'>
+    <h1>Your Address Book</h1>
+    {% for contact in contacts %}
+    <div class='row'>
+      <div class='col-md-6'>
+        <p>Name: {{ contact.getName }}</p>
+        <p>Phone: {{ contact.getPhone }} </p>
+        <p>Address: {{ contact.getAddress }} </p>
+      </div>
     </div>
-    <form action="/search">
-        <button type="submit" class="btn-normal">Search</button>
-    </form>
-    <form action="/addNew">
-        <button type="submit" class="btn-success">Add New</button>
-    </form>
+    {% endfor %}
+  </div>
+  <form action="/addNew">
+    <div class="form-group">
+      <label for="title">Enter Title:</label>
+      <input id="title" name="title" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn-success">Add New</button>
+  </form>
+  <form action="/search">
+    <button type="submit" class="btn-normal">Search</button>
+  </form>
 </body>
 </html>
