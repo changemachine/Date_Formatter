@@ -18,17 +18,23 @@
     {% endfor %}
   </div>
   <form action="/create_contact" method="post">
-    <div class="form-group">
-      <label for="name">Enter name:</label>
-      <input id="name" name="name" class="form-control" type="text">
+    <div class="row">
+      <div class="form-group col-lg-4">
+        <label for="name">Enter name:</label>
+        <input id="name" name="name" class="form-control" type="text">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="phone">Enter phone:</label>
-      <input id="phone"phone name="phone" class="form-control" type="text">
+    <div class="row">
+      <div class="form-group col-lg-2">
+        <label for="phone">Enter phone:</label>
+        <input id="phone"phone name="phone" class="form-control" type="text">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="address">Enter address:</label>
-      <input id="address" name="address" class="form-control" type="text">
+    <div class="row">
+      <div class="form-group col-lg-4">
+        <label for="address">Enter address:</label>
+        <input id="address" name="address" class="form-control" type="text">
+      </div>
     </div>
     <button type="submit" class="btn-primary">Add New</button>
   </form>
