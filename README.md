@@ -2,15 +2,19 @@
 ## by Daniel Toader
 ### Date: March 06, 2015
 #### Description
-Address Book is a simple contact store that uses session variables to store the contacts added by the user. The user can add, view, and delete contacts.
+Address Book is a simple contact store that uses session variables to store the contacts added by the user. The user can add, view, and delete contacts.  
+
 #### Setup instructions
 - Clone this git repository
 - Set your localhost root folder to ~/AddressBook/web/
 - Ensure PHP server is running.
-- Start the web app by pointing your browser to the root (http://localhost:8000/)
-#### Copyright 2015 Daniel Toader
+- Start the web app by pointing your browser to the root (http://localhost:8000/)  
+
+#### Copyright 2015 Daniel Toader  
+
 #### License:
-<a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT</a>
+<a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">MIT</a>  
+
 #### Technologies used
 - HTML5
 - CSS3
