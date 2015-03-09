@@ -13,7 +13,7 @@ The Title Case program capitalizes the first letter of all words in a multiple-w
             $temp = strtolower($input_title);
             $temp = ucwords($temp);
             $exploded = explode(" ", $temp);
-            for ($i = 1; $i < count($exploded) - 1; $i) {
+            for ($i = 1; $i < count($exploded) - 1; $i++) {
                 if (in_array(strtolower($exploded[$i]), $this->exceptions)) {
                     $exploded[$i] = strtolower($exploded[$i]);
                 }
