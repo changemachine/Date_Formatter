@@ -57,5 +57,19 @@
             //Assert
             $this->assertEquals("A New Biscuit in the Gravy of an the and but or nor at by for from in into of off on onto out over up with to as Awesome!", $result);
         }
+
+        // Apple related exceptions to capitalizations include: iPhone, iTunes, iMac, iPad, iPod
+        function test_makeTitleCase_appleExceptions()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "iphone IPAD ipoD Imac iTuNes ipad";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("iPhone iPad iPod iMac iTunes iPad", $result);
+        }
     }
  ?>
