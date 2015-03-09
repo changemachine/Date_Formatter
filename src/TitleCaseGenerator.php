@@ -6,7 +6,7 @@ The Title Case program capitalizes the first letter of all words in a multiple-w
 
     class TitleCaseGenerator
     {
-        function makeTitleCase($input_title)
+        static function makeTitleCase($input_title)
         {
             return ucwords($input_title);
         }
