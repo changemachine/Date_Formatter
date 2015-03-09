@@ -17,7 +17,7 @@
             $this->assertEquals("Beowulf", $result);
 
         }
-        
+
         function test_makeTitleCase_multipleWords()
         {
             //Arrange
@@ -29,6 +29,19 @@
 
             //Assert
             $this->assertEquals("The Little Mermaid", $result);
+        }
+
+        function test_makeTitleCase_mixedWords()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "qUeeN vIcToria";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Queen Victoria", $result);
         }
     }
  ?>

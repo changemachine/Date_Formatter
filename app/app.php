@@ -11,7 +11,8 @@
 
   $app->post("/generate", function() use ($app) {
     $title = $_POST['title'];
-    $generated = TitleCaseGenerator::makeTitleCase($title);
+    $newTitleCase = new TitleCaseGenerator();
+    $generated = $newTitleCase->makeTitleCase($title);
     return $app['twig']->render('generate.twig', array('title' => $title, 'generated' => $generated));
   });
 
