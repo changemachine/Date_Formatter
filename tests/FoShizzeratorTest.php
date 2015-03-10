@@ -1,28 +1,28 @@
 <?php
 
-    require_once "src/TitleCaseGenerator.php";
+    require_once "src/FoShizzerator.php";
 
-    class TitleCaseGeneratorTest extends PHPUnit_Framework_TestCase
+    class FoShizzeratorTest extends PHPUnit_Framework_TestCase
     {
-        function test_makeTitleCase_oneWord()
+        function test_FoShizzerator_oneWord()
         {
             //Arrange
-            $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "beowulf";
+            $test_FoShizzerator = new FoShizzerator;
+            $input = "Susan";
 
             //Act
-            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+            $result = $test_FoShizzerator->translate($input);
 
             //Assert
-            $this->assertEquals("Beowulf", $result);
+            $this->assertEquals("Suzan", $result);
 
         }
 
-        function test_makeTitleCase_multipleWords()
+/*        function test_makeTitleCase_multipleWords()
         {
             //Arrange
             $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "the little mermaid";
+            $input = "Susan is a gangsta!";
 
             //Act
             $result = $test_TitleCaseGenerator->makeTitleCase($input);
@@ -57,19 +57,7 @@
             //Assert
             $this->assertEquals("A New Biscuit in the Gravy of an the and but or nor at by for from in into of off on onto out over up with to as Awesome!", $result);
         }
+*/
 
-        // Apple related exceptions to capitalizations include: iPhone, iTunes, iMac, iPad, iPod
-        function test_makeTitleCase_appleExceptions()
-        {
-            //Arrange
-            $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "iphone IPAD ipoD Imac iTuNes ipad";
-
-            //Act
-            $result = $test_TitleCaseGenerator->makeTitleCase($input);
-
-            //Assert
-            $this->assertEquals("iPhone iPad iPod iMac iTunes iPad", $result);
-        }
     }
  ?>

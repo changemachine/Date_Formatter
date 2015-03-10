@@ -1,12 +1,12 @@
-# Title Case for Epicodus
+# Fo Shizzle Generator for Epicodus
 ## by Daniel Toader and James Nielson
 ### Date: March 09, 2015
 #### Description
-The Title Case program capitalizes the first letter of all words in a multiple-word title. For example, we expect it to change the color purple to The Color Purple.
+The Fo Shizzle Generator will turn a given phrase into Snoop-speak.  In general, an s in a word will be replaced with a 'z'.  An s at the beginning of a word will not be changed, nor will an capitalized S.  Not sure what that second exclusion would look like, but an example of the first would be a translation from "Susan's got mad skills" to "Susan'z got mad skillz."
 
 #### Setup instructions
 1. Clone this git repository
-2. Set your localhost root folder to ~/TitleCase/web/
+2. Set your localhost root folder to ~/FoShizzle/web/
 3. Ensure PHP server is running.
 4. Start the web app by pointing your browser to the root (http://localhost:8000/)  
 
