@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title></title>
+<link href="form-styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	var testDates = { 0:'2001-1-1', 1:'2002-2-2', 2:'2003-3-3', 3:'2004-4-4', 4:'2015-12-5' };
+	var date = '';
+	var x;
+	for (x in testDates) {
+	    text += testDates[x];
+	};
+
+
+	$(document).ready(function() {
+	    $("#order-form").submit(function(event) {
+	        event.preventDefault();
+
+	        var inputChz = $("input#cheese").val();
+	        var inputPep = $("input#pep").val();
+
+	        newPizza = Object.create(PizzaOrder);
+	        newPizza.total = orderTotal;
+	        newPizza.chzPlus(parseInt(inputChz));
+	        newPizza.pepPlus(parseInt(inputPep));
+
+	        console.log(orderTotal);
+
+
+
+	        $("#pizza-order").html("<h1><span id='chz-display'>$" + orderTotal + ".00</span></h1>");
+
+	        $("#pizza-pics").html("<div><h4>Cheesy Pizzas:" + orderChz + "</h4><img src='http://a.deviantart.net/avatars/p/i/pizza4president.gif?2' alt='cheesy pizza'></div>" +
+	        "<div><h4>Peppy Pizzas:" + orderPep + "</h4>" +
+	        "<img src='http://fc04.deviantart.net/fs71/f/2014/018/3/0/pixel_pizza_by_monxita244-d72ppq3.gif' alt='peppy pizza'></div>"
+	        );
+
+	        $("#pizza-order").show();
+	    });
+
+
+});
+
+
+
+
+</script>
+
+
+
+</head>
+<body id="demo">
+<div id="stick">
+  <div id="wrap-content">
+    <div id="content">
+	  <div class="page wrap sidecol">
+	  <div class="col-main float-left">
+	    <h2 class="page-title">AJAX Form Validation</h2>
+
+		  <form id="form-contact" class="styled" action="test_submit.htm" method="post">
+		    <fieldset>
+			  <legend>Contact Form</legend>
+			  <ol>
+			    <li class="form-row">
+				  <label>Email:</label>
+				  <input id="input-email" type="text" class="text-input required email default" name="email" value="" title="Enter Your Email Address" />
+				</li>
+				<li class="form-row">
+				  <label>Name:</label>
+				  <input id="input-name" type="text" class="text-input required default" name="name" value="" title="Enter Your Full Name" />
+				</li>
+				<li class="form-row">
+				  <label>Phone:</label>
+				  <input id="input-phone" type="text" class="text-input" name="phone" value="" />
+				</li>
+				<li class="form-row">
+				  <label>Comments:</label>
+				  <textarea id="input-message" class="text-area" name="message" cols="40" rows="8"></textarea>
+				</li>
+				<li class="button-row text-right">
+				  <input class="btn-submit" type="submit" value="submit" name="submit" />
+				</li>
+			  </ol>
+			</fieldset>
+		  </form>
+
+	  </div>
+	  </div>
+<!-- End Footer -->
+</body>
+</html>

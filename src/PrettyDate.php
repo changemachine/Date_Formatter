@@ -49,7 +49,7 @@ Dec 5, 2015 <- note the difference in sequence for this last one
 
             // return an error message when any other variable is passed to the method
             else {
-                $dateOutput = 'ERRONEOUS INPUT';
+                $dateOutput = 'ERROR';
             }
             return $dateOutput;
         }// /translate
@@ -78,7 +78,7 @@ Dec 5, 2015 <- note the difference in sequence for this last one
         }
         // return an error message when any other variable is passed to the method
         else {
-            $dateOutput = 'ERRONEOUS INPUT';
+            $dateOutput = 'ERROR';
         }
 
         return $dateOutput;

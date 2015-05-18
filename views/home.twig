@@ -32,13 +32,60 @@
         <!-- <a href="/" class="btn btn-primary">Home</a> -->
     <p>Input: {{ input }}</p>
     <p>Output: <strong>{{ prettyOutput }}</strong></p>
-
     </div>
-<!-- <div>
-    {% for date in dateOut %}
-        {{ date.mm }}
-</div>
- -->
+
+
+        <div>
+            <h1>Predefined Dates</h1>
+            <div class='col-md-2'>
+                <ul>
+                    {% for date in datesOut %}
+                        <li>{{ date.prettyDate(0) }}</li>
+                    {% else %}
+                        <li><em>No dice.</em></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class='col-md-2'>
+                <ul>
+                    {% for date in datesOut %}
+                        <li>{{ date.prettyDate(1) }}</li>
+                    {% else %}
+                        <li><em>No dice.</em></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class='col-md-2'>
+                <ul>
+                    {% for date in datesOut %}
+                        <li>{{ date.prettyDate(2) }}</li>
+                    {% else %}
+                        <li><em>No dice.</em></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class='col-md-3'>
+                <ul>
+                    {% for date in datesOut %}
+                        <li>{{ date.prettyDate(3) }}</li>
+                    {% else %}
+                        <li><em>No dice.</em></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class='col-md-2'>
+                <ul>
+                    {% for date in datesOut %}
+                        <li>{{ date.prettyDate(4) }}</li>
+                    {% else %}
+                        <li><em>No dice.</em></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+
   </div>
 </body>
 </html>
