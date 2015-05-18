@@ -7,7 +7,8 @@ Presents a chosen date in multiple formats.
 
 #### Setup instructions
 1. Clone git repository
-2. Start a PHP server at project root
+2. Install necessary libraries/components (Silex, Twig).  ie, composer install
+3. Start a PHP server at project root
 3. Head on over to your server's address (often times http://localhost:8000/)  
 
 #### Copyright © 2015, James Nielson
