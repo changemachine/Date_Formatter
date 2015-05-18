@@ -3,16 +3,18 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Title Case Generator</title>
+  <title>Pretty Date</title>
 </head>
 <body>
   <div class="container">
-    <h1>Title Case Generator</h1>
-    <h5>Your input was: {{ title }}</h5>
-    <h5>Your Title Case generated title is: <strong>{{ generated }}</strong></h5>
+    <div class='well'>
+        <h2>Pretty Date</h2>
+        <a href="/" class="btn btn-primary">Home</a>
+
+    </div>
+
+    <p>Input: {{ input }}</p>
+    <p>Output: <strong>{{ prettyOutput }}</strong></p>
   </div>
-  <form class="center" action="/">
-    <button type="submit" class="btn-primary">Return Home</button>
-  </form>
 </body>
 </html>

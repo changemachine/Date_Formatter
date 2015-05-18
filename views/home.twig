@@ -3,22 +3,42 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <title>Title Case Generator</title>
+  <title>Date Generator</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Title Case Generator</h1>
+<div class="container">
+    <header class='jumbotron'>
+        <h2>Pretty Date</h2>
+        <h4>{{ today }}</h4>
+    </header>
 
-  </div>
-  <form class="center" action="/generate" method="post">
     <div class="row">
-      <div class="form-group col-lg-4">
-        <label for="title">Enter title:</label>
-        <input class="wide-input" id="title" name="title" type="text" maxlength="200" required>
-      </div>
+        <form class="form-inline" action="/result" method="post">
+          <div class="form-group col-lg-4">
+            <input name="date" id='date' class='form-inline' type="date" required>
+            <select name="style" id="style">
+                <option value="0">yyyy-mm-dd</option>
+                <option value="1">mm/dd/yyyy</option>
+                <option value="2">Month day, year</option>
+                <option value="3">Verbose</option>
+                <option value="4">Break Internet</option>
+            </select>
+            <button type="submit" class="btn-primary">Compute</button>
+          </div>
+        </form>
     </div>
+
+    <div class='well'>
+        <!-- <a href="/" class="btn btn-primary">Home</a> -->
+    <p>Input: {{ input }}</p>
+    <p>Output: <strong>{{ prettyOutput }}</strong></p>
+
     </div>
-    <button type="submit" class="btn-primary">Generate!</button>
-  </form>
+<!-- <div>
+    {% for date in dateOut %}
+        {{ date.mm }}
+</div>
+ -->
+  </div>
 </body>
 </html>
